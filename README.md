@@ -26,7 +26,7 @@ Existing neural networks available for PHP at the time (most notably FANN) were 
 
 Documentation
 -------------
-There is some documentation availble [here](neural-network/documentation.html), or just look at [some example code](neural-network/example.php).
+There is some API level documentation available in the 'documentation.html' file, or just have a look at the provided example code.
 
 Good luck! If you ever build something nice with this, please let me know.
 
