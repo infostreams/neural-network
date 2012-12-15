@@ -2,8 +2,6 @@ About
 =====
 The Tremani Neural Network allows you to build, train and employ neural networks in PHP. It is easy to use and set up, and does not rely on external software to be installed on your webserver. The software is open source under the BSD license, which means you can use and modify it freely.
 
-[download](class_neuralnetwork.php)
-
 About neural networks
 ---------------------
 A neural network can be used to find complex relationships between data. Usually, you start with a large set of data that has some unknown relationship between input and output. A neural network can be used to find that unknown relationship. Once that relationship is found, the neural network can be used to compute the output for similar (but usually different) input. So, essentially, neural networks can learn complex relationships between input and output.
@@ -28,7 +26,7 @@ Existing neural networks available for PHP at the time (most notably FANN) were 
 
 Documentation
 -------------
-There is some documentation availble [here](documentation.html), or just look at [some example code](example.php).
+There is some documentation availble [here](neural-network/documentation.html), or just look at [some example code](neural-network/example.php).
 
 Good luck! If you ever build something nice with this, please let me know.
 
