@@ -430,7 +430,7 @@ class NeuralNetwork {
 		$epoch = 0;
 		$errorControlSet = array ();
 		$avgErrorControlSet = array ();
-		define('SAMPLE_COUNT', 10);
+		$sample_count = 10;
 		do {
 //                        echo "<tr><td colspan=10><b>epoch $epoch</b></td></tr>";
 			for ($i = 0; $i < count($this->trainInputs); $i ++) {
@@ -461,8 +461,8 @@ class NeuralNetwork {
 				$squaredErrorControlSet = $this->squaredErrorControlSet();
 				$errorControlSet[] = $squaredErrorControlSet;
 
-				if (count($errorControlSet) > SAMPLE_COUNT) {
-					$avgErrorControlSet[] = array_sum(array_slice($errorControlSet, -SAMPLE_COUNT)) / SAMPLE_COUNT;
+				if (count($errorControlSet) > $sample_count) {
+					$avgErrorControlSet[] = array_sum(array_slice($errorControlSet, -$sample_count)) / $sample_count;
 				}
 
 				list ($slope, $offset) = $this->fitLine($avgErrorControlSet);
@@ -723,7 +723,7 @@ class NeuralNetwork {
 					$weight_correction = $learning_rate * $nodeValue * $errorgradient[$layer][$node];
 
 					// 2c. retrieve previous weight correction
-					$prev_weightcorrection = $this->previousWeightCorrection[$layer][$node];
+					$prev_weightcorrection = @$this->previousWeightCorrection[$layer][$node];
 
 					// 2d. combine those ('momentum learning') to a new weight
 					$new_weight = $edgeWeight + $weight_correction + $momentum * $prev_weightcorrection;

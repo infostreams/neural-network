@@ -30,6 +30,7 @@ $n->addTestData(array ( 1,  1, 1), array (-1));
 
 // we try training the network for at most $max times
 $max = 3;
+$i = 0;
 
 echo "<h1>Learning the XOR function</h1>";
 // train the network in max 1000 epochs, with a max squared error of 0.01
