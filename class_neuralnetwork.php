@@ -119,6 +119,33 @@ class NeuralNetwork {
 		$this->layerCount = count($this->nodeCount);
 	}
 
+	public function export()
+	{
+		
+		return array(
+			'layerCount' => $this->layerCount,
+			'nodeCount' => $this->nodeCount,
+			'edgeWeight' => $this->edgeWeight,
+			'nodeThreshold' => $this->nodeThreshold,
+			'learningRate' => $this->learningrate,
+			'momentum' => $this->momentum,
+			'isVerbose' => $this->isVerbose,
+			'weightsInitialized' => $this->weightsInitialized,
+		);
+		
+	}
+	
+	
+	public function import($nn_array)
+	{
+		foreach ($nn_array as $key => $value)
+		{
+			$this->$key = $value;
+		}
+		
+		return $this;
+	}
+
 	/**
 	 * Sets the learning rate between the different layers. 
 	 *
