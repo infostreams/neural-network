@@ -119,9 +119,13 @@ class NeuralNetwork {
 		$this->layerCount = count($this->nodeCount);
 	}
 
+	/**
+	 * Exports the neural network
+	 * 
+	 * @returns array
+	 */
 	public function export()
 	{
-		
 		return array(
 			'layerCount' => $this->layerCount,
 			'nodeCount' => $this->nodeCount,
@@ -132,17 +136,18 @@ class NeuralNetwork {
 			'isVerbose' => $this->isVerbose,
 			'weightsInitialized' => $this->weightsInitialized,
 		);
-		
 	}
-	
-	
+
+	/**
+	 * Import a neural network
+	 * @param array $nn_array An array of the neural network parameters
+	 */
 	public function import($nn_array)
 	{
 		foreach ($nn_array as $key => $value)
 		{
 			$this->$key = $value;
 		}
-		
 		return $this;
 	}
 
