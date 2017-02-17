@@ -21,7 +21,7 @@ require_once ("class_neuralnetwork.php");
 $n = new NeuralNetwork(3, 4, 1);
 $n->setVerbose(false);
 
-// Add test-data to the network. In this case,
+// Add test-data to the network. In this case, 
 // we want the network to learn the 'XOR'-function
 $n->addTestData(array (-1, -1, 1), array (-1));
 $n->addTestData(array (-1,  1, 1), array ( 1));
@@ -57,7 +57,7 @@ echo "</div>";
 //echo "<h2>Internal network state</h2>";
 //$n->showWeights($force=true);
 
-// Now, play around with some of the network's parameters a bit, to see how it 
+// Now, play around with some of the network's parameters a bit, to see how it
 // influences the result
 $learningRates = array(0.1, 0.25, 0.5, 0.75, 1);
 $momentum = array(0.2, 0.4, 0.6, 0.8, 1);
@@ -65,18 +65,18 @@ $rounds = array(100, 500, 1000, 2000);
 $errors = array(0.1, 0.05, 0.01, 0.001);
 
 echo "<h1>Playing around...</h1>";
-echo "<p>The following is to show how changing the momentum & learning rate, 
-in combination with the number of rounds and the maximum allowable error, can 
-lead to wildly differing results. To obtain the best results for your 
+echo "<p>The following is to show how changing the momentum & learning rate,
+in combination with the number of rounds and the maximum allowable error, can
+lead to wildly differing results. To obtain the best results for your
 situation, play around with these numbers until you find the one that works
 best for you.</p>";
-echo "<p>The values displayed here are chosen randomly, so you can reload 
+echo "<p>The values displayed here are chosen randomly, so you can reload
 the page to see another set of values...</p>";
 
 for ($j=0; $j<10; $j++) {
 	// no time-outs
 	set_time_limit(0);
-	
+
 	$lr = $learningRates[array_rand($learningRates)];
 	$m = $momentum[array_rand($momentum)];
 	$r = $rounds[array_rand($rounds)];
