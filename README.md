@@ -8,9 +8,9 @@ A neural network can be used to find complex relationships between data. Usually
 
 For example, neural networks can learn the XOR-function, it can be used to estimate the difficulty of a text or be trained in pattern recognition.
 
-Advanced
---------
-This software employs the latest technology in neural networks. The network that is created is a feed forward, multi-layer perceptron network with support for momentum learning and an advanced mechanism to prevent overfitting. Also, it allows you to easily adapt it to your needs by overriding key methods such as the activation function.
+Previously advanced
+-------------------
+This software implements the 2007 state-of-the-art technology in neural networks. There has been immense progress in this field since that time though, but this software is still useful as an introduction to neural networks or if you need something fairly simple. The network that is created is a feed forward, multi-layer perceptron network with support for momentum learning and an advanced mechanism to prevent overfitting. Also, it allows you to easily adapt it to your needs by overriding key methods such as the activation function.
 
 History
 -------
