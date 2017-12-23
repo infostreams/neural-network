@@ -131,7 +131,7 @@ class NeuralNetwork {
 			'nodeCount' => $this->nodeCount,
 			'edgeWeight' => $this->edgeWeight,
 			'nodeThreshold' => $this->nodeThreshold,
-			'learningRate' => $this->learningrate,
+			'learningRate' => $this->learningRate,
 			'momentum' => $this->momentum,
 			'isVerbose' => $this->isVerbose,
 			'weightsInitialized' => $this->weightsInitialized,
